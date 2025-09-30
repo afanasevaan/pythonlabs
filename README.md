@@ -11,7 +11,7 @@ next_age = age + 1
 print(F"Привет, {name}! Через год тебе будет {next_age}")
 ```
 
-[im01.png](/images/lab01/im01.png)
+![im01.png](/images/lab01/im01.png)
 
 ### Задание 2
 
@@ -28,7 +28,7 @@ sumc= n1 + n2
 avg = sumc/2
 print(F'sum = {'%.2f'%sumc}; avg = {'%.2f'%avg}')
 ```
-[im02.png](/images/lab01/im02.png)
+![im02.png](/images/lab01/im02.png)
 
 ### Задание 3
 
@@ -44,7 +44,7 @@ print(F'НДС:{'%.2f'%v_amount}')
 print(F'Итого к оплате:{'%.2f'%total}')
 ```
 
-[im03.png](/images/lab01/im03.png)
+![im03.png](/images/lab01/im03.png)
 
 ### Задание 4
 
@@ -55,7 +55,7 @@ minutes = m % 60
 print(F'{hour}:{minutes:02d}')
 ```
 
-[im04.png](/images/lab01/im04.png)
+![im04.png](/images/lab01/im04.png)
 
 ### Задание 5
 
@@ -66,5 +66,5 @@ print(F'Инициалы: {''.join(init)}.')
 print(F'Длина (символов): {len(''.join(fn))}')
 ```
 
-[im05.png](/images/lab01/im05.png)
+![im05.png](/images/lab01/im05.png)
 
