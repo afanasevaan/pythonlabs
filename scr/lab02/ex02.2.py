@@ -4,7 +4,7 @@ def row_sums(mat: list[list[float | int]]):
     len_s = len(mat[0])
     for i in mat:
         if len(i)!=len_s:
-            return "ValueError"
+            raise TypeError ("ValueError")
     R = []
     for i in mat:
         R.append(sum(i))

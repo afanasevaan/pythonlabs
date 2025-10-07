@@ -1,6 +1,6 @@
 def min_max(nums: list[float | int]):
     if not nums:
-        return ('Value Error')
+        raise TypeError ('Value Error')
     else:
         return min(nums), max(nums)
 print(min_max([3, -1, 5, 5, 0]))
