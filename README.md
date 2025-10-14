@@ -332,4 +332,4 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-![im02.1.png](/images/lab03/im02.1.png)
+![im02.1.png](/images/lab03/im02.1.png) 
