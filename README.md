@@ -201,7 +201,6 @@ print(col_sums([[1, 2], [3]]))
 ### Задание A1
 
 ```
-import string
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     s = text
     if casefold:
@@ -227,7 +226,6 @@ print(res_normalise1, res_normalise2, res_normalise3, res_normalise4, sep='\n')
 
 ### Задание A2
 ```
-import string
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     s = text
     if casefold:

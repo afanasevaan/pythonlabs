@@ -1,4 +1,3 @@
-import string
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     s = text
     if casefold:
