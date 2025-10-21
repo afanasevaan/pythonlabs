@@ -332,8 +332,11 @@ if __name__ == "__main__":
 ```
 ![im02.1.png](/images/lab03/im02.1.png) 
 
+
 ## Лабароторная 4
+
 ### задание A
+
 ```
 from csv import writer
 from pathlib import Path
@@ -364,7 +367,7 @@ def validate_output_file(filename):
     path = Path(filename)
     if path.suffix.lower() != '.csv':
         raise ValueError()
-        
+
 def main():
     input_file = "scr/data/lab04/input.txt"  
     output_file = "scr/data/lab04/report.csv"  
@@ -390,5 +393,5 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-![im04.png](/images/lab04/im01.png) 
 
+![im01.png](/images/lab04/im01.png) 
