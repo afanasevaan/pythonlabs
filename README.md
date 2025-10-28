@@ -493,9 +493,9 @@ csv_to_json("src/data/samples/people.csv", "src/data/out/people_from_csv.json")
 ![im02.png](/images/lab05/im02.png)
 ##
 ### Выходные данные:
-![im01.1.png](/images/lab05/im01.2.png)
+![im01.1.png](/images/lab05/im01.1.png)
 ##
-![im01.2.png](/images/lab05/im01.2.png)
+![imo1.2.png](/images/lab05/im01.2.png)
 #
 ## Задание В:
 ### Установка зависимостей:
