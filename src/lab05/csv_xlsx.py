@@ -18,8 +18,8 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     # Чтение CSV
     try:
         with csv_file.open('r', encoding='utf-8') as f:
-            reader = csv.reader(f)
-            rows = list(reader)
+            reader = csv.reader(f) # разбивает строки айла на ячейки без запятой
+            rows = list(reader) # читает все строки и превращает в список списков 
     except Exception as e:
         raise ValueError(f"Ошибка чтения CSV: {e}")
     
@@ -39,8 +39,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
             ws.append(row)
         
         
-        for col_idx, column_cells in enumerate(ws.columns, 1):
-            max_length = 8  
+        for col_idx, column_cells in enumerate(ws.columns, 1): # генератор всех столбцов в таблице            max_length = 8  
             column_letter = get_column_letter(col_idx)
             
             for cell in column_cells:
