@@ -1,0 +1,90 @@
+# Лабораторная работа №6
+## Модуль cli_text.py - работа с текстом
+**Команда: cat**
+
+**Описание:** Вывод содержимого файла с опциональной нумерацией
+
+```bash
+python src/lab06/cli_text.py cat --input src/data/samples/test.txt -n
+```
+
+**Вывод консоли**
+![img](images/lab06/cat.png)
+
+**Команда: stats**
+
+**Описание:** Анализ частот слов в текстовом файле
+
+```bash
+python src/lab06/cli_text.py stats --input src/data/samples/test.txt -n
+```
+
+**Вывод консоли**
+![img](images/lab06/stats.png)
+
+**Команда: --help**
+
+**Описание:** Помошник по работе с командой
+
+```bash
+python src/lab06/cli_text.py --help --input src/data/samples/test.txt -n
+```
+**Вывод консоли**
+![img](images/lab06/help.png)
+
+## Модуль cli_convert.py - работа с текстом
+
+**Команда: json2csv**
+
+**Описание:** Конвертирует JSON файл в CSV формат
+
+```bash
+cd /Users/anastasiaafanaseva/Desktop/pythonLabs
+python src/lab06/cli_convert.py json2csv --in src/data/samples/people.json --out src/data/out/people.csv
+```
+
+**Вывод консоли**
+![img](images/lab06/вывод j2c.png)
+
+**Выходной Файл**
+
+![img](data/lab06/out j2c.png)
+
+**Команда: csv2json**
+
+**Описание:** Конвертирует CSV файл в JSON формат
+
+```bash
+cd /Users/anastasiaafanaseva/Desktop/pythonLabs
+python src/lab06/cli_convert.py csv2json --in src/data/samples/people.csv --out src/data/out/people.json
+```
+
+**Вывод консоли**
+![img](images/lab06/вывод c2j.png)
+
+**Выходной Файл**
+![img](images/lab06/out c2j.png)
+
+**Команда: csv2xlsx**
+
+**Описание:** Конвертирует CSV файл в XLSX формат (Excel)
+
+```bash
+cd /Users/anastasiaafanaseva/Desktop/pythonLabs
+python src/lab06/cli_convert.py csv2xlsx --in src/data/samples/people.csv --out src/data/out/people.xlsx
+```
+
+**Вывод консоли**
+![img](images/lab06/вывод c2x.png)
+
+
+**Выходной Файл**
+![img](images/lab06/out c2x.png)
+
+**Вывод:** В ходе работы созданы два CLI-модуля: для анализа текста и конвертации файлов.
+
+Текстовая утилита выводит содержимое файлов и показывает статистику слов.
+
+Конвертер преобразует данные между форматами JSON, CSV и XLSX.
+
+Оба инструмента работают из командной строки с различными параметрами.
