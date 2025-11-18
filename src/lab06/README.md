@@ -63,7 +63,7 @@ python src/lab06/cli_convert.py csv2json --in src/data/samples/people.csv --out 
 ![c2j.png](/images/lab06/c2j.png)
 
 **Выходной Файл**
-![out_c2j.png](images/lab06/out_c2j.png)
+![2.png](images/lab06/2.png)
 
 **Команда: csv2xlsx**
 
@@ -75,11 +75,11 @@ python src/lab06/cli_convert.py csv2xlsx --in src/data/samples/people.csv --out 
 ```
 
 **Вывод консоли**
-![c2x.png](images/lab06/c2x.png)
+![1.3.png](images/lab06/1.3.png)
 
 
 **Выходной Файл**
-![out_c2x.png](images/lab06/out_c2x.png)
+![3.png][images/lab06/3.png]
 
 **Вывод:** В ходе работы созданы два CLI-модуля: для анализа текста и конвертации файлов.
 
