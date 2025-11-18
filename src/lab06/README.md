@@ -75,11 +75,11 @@ python src/lab06/cli_convert.py csv2xlsx --in src/data/samples/people.csv --out 
 ```
 
 **Вывод консоли**
-![1.3.png](images/lab06/1.3.png)
+![1.3.png](/images/lab06/1.3.png)
 
 
 **Выходной Файл**
-![3.png][images/lab06/3.png]
+![3.png][/images/lab06/3.png]
 
 **Вывод:** В ходе работы созданы два CLI-модуля: для анализа текста и конвертации файлов.
 
