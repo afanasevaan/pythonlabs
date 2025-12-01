@@ -1,4 +1,7 @@
-fn= input('ФИО:').split()
+fn = input("Введите ФИО: ").split()  # Исправлено fm -> fn
 init = [i[0] for i in fn]
-print(F'Инициалы: {''.join(init)}.')
-print(F'Длина (символов): {len(''.join(fn))+2}')
+
+print(f'Инициалы: {".".join(init)}.')
+
+full_name = "".join(fn)
+print(f"Длина (сложить): {len(full_name)}")

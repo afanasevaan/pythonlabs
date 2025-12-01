@@ -3,19 +3,22 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     if casefold:
         s = s.casefold()
     if yo2e:
-        s = s.replace('ё', 'е').replace('Ё', 'Е')
-    s = s.replace('\n', ' ').replace('\r', ' ').replace('\t', ' ')
+        s = s.replace("ё", "е").replace("Ё", "Е")
+    s = s.replace("\n", " ").replace("\r", " ").replace("\t", " ")
     s = s.strip()
-    while '  ' in s:
-        s = s.replace('  ', ' ')
+    while "  " in s:
+        s = s.replace("  ", " ")
     return s
 
-import re # Библиотека регулярных выражений
+
+import re  # Библиотека регулярных выражений
+
 
 def tokenize(text: str):
     # Регулярное выражение для захвата "слов", состоящих из букв, цифр, подчёркивания и дефисов внутри слова
-    tokens = re.findall(r'\w+(?:-\w+)*', text) 
+    tokens = re.findall(r"\w+(?:-\w+)*", text)
     return tokens
+
 
 example_tokenize1 = "emoji 😀 не слово"
 example_tokenize2 = "2025 год"

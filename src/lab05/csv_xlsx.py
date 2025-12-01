@@ -7,41 +7,43 @@ from openpyxl.utils import get_column_letter
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     csv_file = Path(csv_path)
     xlsx_file = Path(xlsx_path)
-    
+
     if not csv_file.exists():
         raise FileNotFoundError(f"Файл {csv_path} не найден")
-    
-    if csv_file.suffix.lower() != '.csv':
+
+    if csv_file.suffix.lower() != ".csv":
         raise ValueError("Неверный тип файла. Ожидается .csv")
-    
+
     # Чтение CSV
     try:
-        with csv_file.open('r', encoding='utf-8') as f:
-            reader = csv.reader(f) # разбивает строки файла на ячейки по запятой
-            rows = list(reader) # читает все строки и превращает в список списков 
+        with csv_file.open("r", encoding="utf-8") as f:
+            reader = csv.reader(f)  # разбивает строки файла на ячейки по запятой
+            rows = list(reader)  # читает все строки и превращает в список списков
     except Exception as e:
         raise ValueError(f"Ошибка чтения CSV: {e}")
-    
+
     if not rows:
         raise ValueError("Пустой CSV файл")
-    
+
     if not rows[0]:
         raise ValueError("CSV файл не содержит заголовка")
-    
+
     # Создание XLSX
     try:
         wb = Workbook()
         ws = wb.active
         ws.title = "Sheet1"
-        
+
         for row in rows:
             ws.append(row)
-        
+
         # Настройка ширины столбцов
-        for col_idx, column_cells in enumerate(ws.columns, 1): # генератор всех столбцов в таблице
+        for col_idx, column_cells in enumerate(
+            ws.columns, 1
+        ):  # генератор всех столбцов в таблице
             max_length = 0  # ИНИЦИАЛИЗАЦИЯ: сбрасываем для каждого нового столбца
             column_letter = get_column_letter(col_idx)
-            
+
             for cell in column_cells:
                 try:
                     if cell.value:
@@ -50,17 +52,17 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
                             max_length = cell_length
                 except:
                     pass
-            
+
             # Если все ячейки пустые, устанавливаем минимальную ширину
             if max_length == 0:
                 max_length = 8
-            
+
             adjusted_width = max_length + 2
             ws.column_dimensions[column_letter].width = adjusted_width
-        
+
         wb.save(xlsx_file)
         print(f"Файл успешно конвертирован: {xlsx_path}")
-        
+
     except Exception as e:
         raise ValueError(f"Ошибка создания XLSX: {e}")
 
