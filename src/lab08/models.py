@@ -16,7 +16,7 @@ class Student:
         try:
             datetime.strptime(self.birthdate, "%Y-%m-%d")
         except ValueError:
-            raise ValueError(f"Invalid date format: {self.birthdate}. Use YYYY-MM-DD")
+            raise ValueError(f"Invalid date format: {self.birthdate}, Use YYYY-MM-DD")
 
         # Валидация среднего балла
         if not (0 <= self.gpa <= 5):
@@ -45,6 +45,7 @@ class Student:
             "gpa": self.gpa,
         }
 
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Student":
         """Десериализация объекта из словаря"""
@@ -69,3 +70,5 @@ if __name__ == "__main__":
         print(f"Словарь: {student.to_dict()}")
     except ValueError as e:
         print(f"Ошибка: {e}")
+
+
