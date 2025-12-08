@@ -1,6 +1,5 @@
-# ЛР9 — «База данных» на CSV: класс Group, CRUD-операции и CLI
-## Задание A - Реализовать класс Group
-### Код(Реализация класса Group):
+# Задание A - Реализовать класс Group
+## Код(Реализация класса Group):
 ```python
 import csv
 from pathlib import Path
@@ -75,7 +74,7 @@ class Group:
                 writer.writerow([st.fio, st.birthdate, st.group, st.gpa])
 
 ```
-### Код для проверки(main.py):
+## Код для проверки(main.py):
 ```python
 import sys
 import os
@@ -109,7 +108,7 @@ g.remove("Желдак Мария Анатольевна")
 print_students("После удаления Желдак:", g.list())
 ```
 
-### вывод в консоли:
+## вывод в консоли:
 ![im01.png](/images/lab09/im01.png)
 
 # Вывод:
