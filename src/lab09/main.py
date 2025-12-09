@@ -20,8 +20,8 @@ new_st = Student("Дурова Варвара Дмитриевна", "2007-08-10
 g.add(new_st)
 print_students("После добавления:", g.list())
 
-found = g.find("те")  # ищем по подстроке
-print_students("Поиск 'те':", found)
+found = g.find("ов")  # ищем по подстроке
+print_students("Поиск 'ов':", found)
 
 g.update("Невейкин Захар Захарович", gpa=4.1, group="БИВТ-21-4")
 print_students("После обновления данных Невейкина:", g.list())
