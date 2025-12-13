@@ -55,12 +55,16 @@ class Queue:
 ```
 
 ### Классы в linked_list.py
+#### Node
 ```python
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
+```
 
+#### SinglyLinkedList
+```python
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
